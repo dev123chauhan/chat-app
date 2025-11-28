@@ -7,14 +7,11 @@ import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import Layout from "../layout/Layout";
 import HomePage from "../pages/HomePage";
-import Loading from "../components/Loading/Loading";
 const AppRoutes = () => {
-  const { authUser, checkAuth, isCheckingAuth } = useAuthStore();
+  const { authUser, checkAuth } = useAuthStore();
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
-
-  if (isCheckingAuth && !authUser) return <Loading />;
   return (
     <>
       <Routes>
