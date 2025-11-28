@@ -1,0 +1,16 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.chat-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.chat-card-body {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}

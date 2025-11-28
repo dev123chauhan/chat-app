@@ -1,0 +1,267 @@
+.sidebar-wrapper {
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: #f8f9fa;
+  height: 100%;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.header-icon {
+  color: #667eea;
+}
+
+.header-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #2d3748;
+}
+
+.search-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.search-input {
+  padding-left: 2.5rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+.contacts-list,
+.rooms-list {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.contact-item,
+.room-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+  padding: 0.875rem;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+
+.contact-item:hover,
+.room-item:hover {
+  background: white;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item.active,
+.room-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.contact-avatar-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.contact-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: #48bb78;
+  border-radius: 50%;
+  border: 2px solid #f8f9fa;
+}
+
+.contact-item.active .online-badge {
+  border-color: #667eea;
+}
+
+.contact-info,
+.room-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.contact-name,
+.room-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-item.active .contact-name,
+.room-item.active .room-name {
+  color: white;
+}
+
+.contact-status,
+.room-members {
+  font-size: 0.8125rem;
+  color: #718096;
+  margin: 0;
+}
+
+.contact-item.active .contact-status,
+.room-item.active .room-members {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.room-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.room-item.active .room-avatar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.create-room-wrapper {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+}
+
+.create-room-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-room-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.empty-state {
+  text-align: center;
+  color: #a0aec0;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+}
+
+
+/* Add these styles to your sidebar.css file */
+
+.broadcast-wrapper {
+  padding: 0 1rem;
+}
+
+.broadcast-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.broadcast-btn:hover {
+  background: #f5f5f5;
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.broadcast-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.broadcast-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.broadcast-btn.active svg {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Additional header styles */
+.broadcast-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
